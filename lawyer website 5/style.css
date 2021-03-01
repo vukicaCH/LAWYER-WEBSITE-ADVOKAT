@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Bitter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.contact-info {
+    background-color: #222222;
+    color: #8F999A;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 50px;
+}
+
+.contact-data-1 {
+    display: flex;
+}
+
+.contact-data-1 .contact-information {
+    margin: 0 10px;
+}
+
+.contact-information i {
+    color: #EBA35F;
+}
+
+.navigation {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.logo {
+    color: #0F0F0F;
+    font-size: 2rem;
+}
+
+.logo span {
+    color: #EBA35F;
+}
+
+.navigation-list {
+    display: flex;
+}
+
+.navigation-item {
+    margin-left: 20px;
+}
+
+.navigation-item i {
+    display: none;
+}
+
+.navigation-item:first-child {
+    margin-left: 0;
+}
+
+.navigation-link {
+    color: #0F0F0F;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.navigation-link:hover {
+    color: #EBA35F;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle i {
+    font-size: 2rem;
+    transition: .5s ease;
+    opacity: 1;
+}
+
+main {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* pocetna */
+
+.section {
+    padding: 100px;
+}
+
+.pocetna {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(150, 150, 150, .6), rgba(150, 150, 150, .6)), url('img/pozadina-pocetna.jpg') center no-repeat;
+    background-size: cover;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s ease;
+    width: 100%;
+    opacity: 1;
+}
+
+.pocetna h1 {
+    color: #222222;
+    font-size: 2rem;
+}
+
+.pocetna p {
+    margin-top: 30px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.pocetna a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #EBA35F;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.pocetna a:hover {
+    background-color: #ffffff;
+    color: #EBA35F;
+}
+
+/*o-nama*/
+
+.o-nama {
+    background: linear-gradient(to right, rgba(150, 150, 150, .6), rgba(150, 150, 150, .6)), url('img/pozadina-onama.jpg') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s ease;
+    width: 100%;
+    opacity: 0;
+}
+
+.o-nama h1 {
+    color: #222222;
+    font-size: 2rem;
+}
+
+.o-nama-text {
+    width: 500px;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.o-nama-text::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollers {
+    position: absolute;
+    bottom: 70px;
+    display: flex;
+}
+
+.scroll-left {
+    padding: 10px;
+    background-color: #EBA35F;
+}
+
+.scroll-left i {
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.scroll-left i:hover {
+    color: #222222;
+}
+
+.scroll-right {
+    padding: 10px;
+    margin-left: 400px;
+    background-color: #EBA35F;
+}
+
+.scroll-right i {
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.scroll-right i:hover {
+    color: #222222;
+}
+
+
+.o-nama-deo-1,
+.o-nama-deo-2 {
+    display: inline-block;
+    opacity: 1;
+    transition: .2s ease;
+}
+
+.o-nama-deo-2 {
+    opacity: 0;
+}
+
+.o-nama-text .o-nama-deo-1 p {
+    color: #ffffff;
+    margin-top: 30px;
+    width: 500px;
+}
+
+.o-nama-text .o-nama-deo-2 p {
+    color: #ffffff;
+    margin-top: 30px;
+    width: 500px;
+}
+
+/* usluge */
+
+.usluge-sekcija {
+    background: linear-gradient(to right, rgba(150, 150, 150, .6), rgba(150, 150, 150, .6)), url('img/pozadina-usluge.jpg') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transition: .5s ease;
+    width: 100%;
+    opacity: 0;
+}
+
+.usluge-sekcija h1 {
+    font-size: 2rem;
+}
+
+.usluge {
+    display: flex;
+    width: 500px;
+    margin-left: 30px;
+    align-self: flex-end;
+    position: relative;
+}
+
+.usluga {
+    background-color: #ffffff;
+    padding: 20px;
+    display: inline-block;
+    width: 500px;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    transition: .5s ease;
+}
+
+.usluga h1 {
+    color: #EBA35F;
+    margin-bottom: 20px;
+}
+
+.usluga-p {
+    color: #222222;
+
+}
+
+.selectors {
+    margin-top: 50px;
+}
+
+.selectors h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ffffff;
+    background-color: #EBA35F;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.selectors h1:hover {
+    color: #222222;
+    background: #ffffff;
+}
+
+/* kontakt */
+
+.kontakt {
+    background: linear-gradient(to right, rgba(150, 150, 150, .6), rgba(150, 150, 150, .6)), url('img/pozadina-usluge.jpg') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 30px;
+    transition: .5s ease;
+    width: 100%;
+    opacity: 0;
+}
+
+.kontakt h1 {
+    font-size: 2rem;
+}
+
+.kontakt p {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.kontakt span {
+    color: #ffffff;
+}
+
+.kontakt span i {
+    color: #222222;
+}
+
+.kontakt-forma form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt-forma form input {
+    font-family: 'Bitter', sans-serif;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 10px 0;
+    outline: none;
+    border: 1px solid #EBA35F;
+}
+
+
+
+.kontakt-forma form textarea {
+    font-family: 'Bitter', sans-serif;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 10px 0;
+    outline: none;
+    border: 1px solid #EBA35F;
+}
+
+
+.kontakt-forma form input[type='submit'] {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #EBA35F;
+    color: #ffffff;
+}
+
+/*footer*/
+
+
+footer {
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hitan-slucaj {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(255, 255, 255, .4)), url('img/pozadina-hitno.jpg') center no-repeat;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    color: #cecaca;
+}
+
+.hitan-slucaj h1 {
+    margin-bottom: 20px;
+}
+
+.hitan-slucaj .span-mobilni {
+    color: #EBA35F;
+}
+
+.radno-vreme {
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(255, 255, 255, .4)), url('img/pozadina-radno-vreme.jpg') center no-repeat;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #cecaca;
+}
+
+.radno-vreme h1 {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.radno-vreme span.vreme {
+    color: #EBA35F;
+}
+
+.radno-vreme .prvi-span {
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    padding-top: 2px;
+}
+
+.radno-vreme .prvi-span::before {
+    content: '';
+    position: absolute;
+    top: 42px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+@media screen and (max-width:768px) {
+
+    .pocetna {
+        padding: 50px;
+    }
+
+
+    .pocetna p br {
+        display: none;
+    }
+
+    .section {
+        padding: 50px;
+    }
+
+    .usluge-sekcija {
+        padding-top: 150px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .usluge {
+        margin-left: 0px;
+        align-self: initial
+    }
+
+
+    .usluga {
+        bottom: -400px;
+        width: 400px;
+    }
+
+
+    .usluga p {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .navigation-list {
+        position: absolute;
+        top: 50px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+        transition: 1s ease;
+    }
+
+    .navigation-item {
+        margin: 30px 0;
+        font-size: 1.2rem;
+    }
+
+    .navigation-item i {
+        display: initial;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        font-size: 2rem;
+    }
+
+    .toggle {
+        display: initial;
+    }
+
+    .o-nama-text {
+        width: 400px;
+    }
+
+    .o-nama-text .o-nama-deo-1 p,
+    .o-nama-text .o-nama-deo-2 p {
+        width: 400px;
+    }
+
+
+    .scroll-right {
+        margin-left: 300px;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    main,
+    .pocetna,
+    .o-nama,
+    .usluge-sekcija,
+    .kontakt {
+        height: 160vh;
+    }
+
+    .pocetna a {
+        margin-bottom: 200px;
+    }
+
+    .o-nama-text {
+        margin-bottom: 200px;
+    }
+
+    .scrollers {
+        bottom: 380px;
+    }
+
+    .kontakt-forma {
+        margin-bottom: 200px;
+    }
+
+    .contact-info {
+        display: none;
+    }
+
+    .pocetna,
+    .o-nama,
+    .kontakt {
+        padding: 20px;
+    }
+
+    .usluge-sekcija {
+        padding-top: 170px;
+        padding-left: 20px;
+    }
+
+    .kontakt {
+        padding-top: 170px;
+    }
+
+
+    .usluge-text h1 {
+        margin: 2px;
+    }
+
+    .selectors {
+        margin-top: 20px;
+    }
+
+    .o-nama-text {
+        width: 300px;
+    }
+
+    .o-nama-text .o-nama-deo-1 p,
+    .o-nama-text .o-nama-deo-2 p {
+        width: 300px;
+    }
+
+    .scroll-right {
+        margin-left: 200px;
+    }
+
+    .usluga {
+        width: 300px;
+        bottom: -600px;
+    }
+
+    .usluga p {
+        width: 250px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .hitan-slucaj,
+    .radno-vreme {
+        justify-content: initial;
+        align-items: initial;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .kontakt-forma form {
+        width: 80%;
+    }
+}
+
+.open {
+    left: 0;
+}
